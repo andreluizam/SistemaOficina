@@ -15,8 +15,8 @@ namespace ProjetoEF.Telas_de_Cadastro
         #region Variáveis
         OrcamentosItem orcamentosItens;
         List<OrcamentosItem> lstItens;
-        private decimal valorOriginal;
         private int linhaSelecionada = -1;
+        private decimal valorOriginal;
         int orcamentoID;
         int clienteID;
         int pecasID;
@@ -29,7 +29,6 @@ namespace ProjetoEF.Telas_de_Cadastro
             DataGridViewTextBoxColumn valorColumn = new DataGridViewTextBoxColumn();
             gridItens.CellEndEdit += DataGridView1_CellEndEdit;
             btnExcluir.Enabled = false;
-
         }
 
         private void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -199,6 +198,7 @@ namespace ProjetoEF.Telas_de_Cadastro
                 txtTelefone.Text = pesquisa.ClienteSelecionado.Telefone;
             }
             txtPeca.Focus();
+            txtClienteOrc.Enabled = false;
         }
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -289,7 +289,6 @@ namespace ProjetoEF.Telas_de_Cadastro
                 using (DataContext context = new DataContext())
                 {
                     orcamento = new Orcamentos();
-
                     orcamento.ClienteID = clienteID;
                     orcamento.Carro = txtCarro.Text;
                     orcamento.Data = DateTime.Now;
@@ -313,6 +312,20 @@ namespace ProjetoEF.Telas_de_Cadastro
                         orcamentosItens.Valor = item.Valor;
                         orcamentosItens.Subtotal = item.Subtotal;
                         context.Add(orcamentosItens);
+                    }
+                    if (pecasID == 0)
+                    {
+                        Pecas peca = new Pecas();
+                        peca.Nome = txtPeca.Text;
+                        context.Add(peca);
+                        context.SaveChanges();
+                    }
+                    if (clienteID == 0)
+                    {
+                        Cliente cliente = new Cliente();
+                        cliente.Nome = txtClienteOrc.Text;
+                        context.Add(cliente);
+                        context.SaveChanges();
                     }
                     context.SaveChanges();
                 }
@@ -340,7 +353,6 @@ namespace ProjetoEF.Telas_de_Cadastro
                 orcamento.Carro = txtCarro.Text;
                 orcamento.Data = DateTime.Now;
                 orcamento.Total = Convert.ToDecimal(txtValorTotal.Text);
-
                 context.SaveChanges();
             }
 
@@ -429,7 +441,6 @@ namespace ProjetoEF.Telas_de_Cadastro
         #region Teclas
 
         private void txtQtd_KeyDown(object sender, KeyEventArgs e)
-        
         {
             if (e.KeyCode == Keys.Enter)
                 txtValor.Focus();

@@ -93,6 +93,7 @@
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(204, 26);
             txtCidade.TabIndex = 14;
+            txtCidade.KeyDown += txtNome_KeyDown;
             // 
             // txtCep
             // 
@@ -104,6 +105,7 @@
             txtCep.Name = "txtCep";
             txtCep.Size = new Size(254, 26);
             txtCep.TabIndex = 12;
+            txtCep.KeyDown += txtNome_KeyDown;
             // 
             // lblCep
             // 
@@ -126,6 +128,7 @@
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(39, 26);
             txtEstado.TabIndex = 16;
+            txtEstado.KeyDown += txtNome_KeyDown;
             // 
             // btnConsultarCEP
             // 
@@ -173,6 +176,7 @@
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(255, 26);
             txtBairro.TabIndex = 15;
+            txtBairro.KeyDown += txtNome_KeyDown;
             // 
             // txtRua
             // 
@@ -183,6 +187,7 @@
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(255, 26);
             txtRua.TabIndex = 13;
+            txtRua.KeyDown += txtNome_KeyDown;
             // 
             // btnSalvar
             // 
@@ -191,7 +196,7 @@
             btnSalvar.FlatAppearance.MouseDownBackColor = SystemColors.Control;
             btnSalvar.FlatAppearance.MouseOverBackColor = SystemColors.Control;
             btnSalvar.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSalvar.Location = new Point(321, 43);
+            btnSalvar.Location = new Point(321, 44);
             btnSalvar.Margin = new Padding(4, 3, 4, 3);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(145, 72);
@@ -225,10 +230,10 @@
             btnAlterar.FlatAppearance.MouseDownBackColor = SystemColors.Control;
             btnAlterar.FlatAppearance.MouseOverBackColor = SystemColors.Control;
             btnAlterar.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAlterar.Location = new Point(321, 43);
+            btnAlterar.Location = new Point(318, 42);
             btnAlterar.Margin = new Padding(4, 3, 4, 3);
             btnAlterar.Name = "btnAlterar";
-            btnAlterar.Size = new Size(145, 74);
+            btnAlterar.Size = new Size(148, 74);
             btnAlterar.TabIndex = 24;
             btnAlterar.Text = "Alterar";
             btnAlterar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -279,7 +284,7 @@
             btnApagar.FlatAppearance.MouseDownBackColor = SystemColors.Control;
             btnApagar.FlatAppearance.MouseOverBackColor = SystemColors.Control;
             btnApagar.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnApagar.Location = new Point(621, 43);
+            btnApagar.Location = new Point(616, 42);
             btnApagar.Margin = new Padding(4, 3, 4, 3);
             btnApagar.Name = "btnApagar";
             btnApagar.Size = new Size(145, 74);
@@ -323,6 +328,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(732, 26);
             txtNome.TabIndex = 30;
+            txtNome.KeyDown += txtNome_KeyDown;
             // 
             // txtCpfCnpj
             // 
@@ -333,6 +339,7 @@
             txtCpfCnpj.Name = "txtCpfCnpj";
             txtCpfCnpj.Size = new Size(327, 26);
             txtCpfCnpj.TabIndex = 31;
+            txtCpfCnpj.KeyDown += txtNome_KeyDown;
             // 
             // txtTelefone
             // 
@@ -343,6 +350,7 @@
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(340, 26);
             txtTelefone.TabIndex = 32;
+            txtTelefone.KeyDown += txtNome_KeyDown;
             // 
             // txtCarro
             // 
@@ -353,6 +361,7 @@
             txtCarro.Name = "txtCarro";
             txtCarro.Size = new Size(370, 26);
             txtCarro.TabIndex = 33;
+            txtCarro.KeyDown += txtNome_KeyDown;
             // 
             // txtPlaca
             // 
@@ -363,6 +372,7 @@
             txtPlaca.Name = "txtPlaca";
             txtPlaca.Size = new Size(370, 26);
             txtPlaca.TabIndex = 34;
+            txtPlaca.KeyDown += txtNome_KeyDown;
             // 
             // btnCancelar
             // 
@@ -371,10 +381,10 @@
             btnCancelar.FlatAppearance.MouseDownBackColor = SystemColors.Control;
             btnCancelar.FlatAppearance.MouseOverBackColor = SystemColors.Control;
             btnCancelar.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCancelar.Location = new Point(170, 43);
+            btnCancelar.Location = new Point(170, 42);
             btnCancelar.Margin = new Padding(4, 3, 4, 3);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(145, 73);
+            btnCancelar.Size = new Size(145, 74);
             btnCancelar.TabIndex = 47;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -436,7 +446,7 @@
             btnPesquisar.FlatAppearance.MouseDownBackColor = SystemColors.Control;
             btnPesquisar.FlatAppearance.MouseOverBackColor = SystemColors.Control;
             btnPesquisar.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPesquisar.Location = new Point(471, 43);
+            btnPesquisar.Location = new Point(469, 42);
             btnPesquisar.Margin = new Padding(4, 3, 4, 3);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(145, 74);
@@ -457,6 +467,7 @@
             Name = "TelaDeCadastroClientes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de clientes";
+            Load += TelaDeCadastroClientes_Load;
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ResumeLayout(false);

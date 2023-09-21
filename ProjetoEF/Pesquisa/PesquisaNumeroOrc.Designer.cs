@@ -39,7 +39,6 @@
             label1 = new Label();
             txtCliente = new TextBox();
             label2 = new Label();
-            btnPesquisaCliente = new Button();
             ((System.ComponentModel.ISupportInitialize)gridOrcamentos).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +47,7 @@
             gridOrcamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridOrcamentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridOrcamentos.Columns.AddRange(new DataGridViewColumn[] { ID, ClienteID, Cliente, Data, Carro, Total, Itens });
-            gridOrcamentos.Location = new Point(18, 80);
+            gridOrcamentos.Location = new Point(10, 63);
             gridOrcamentos.Margin = new Padding(4, 3, 4, 3);
             gridOrcamentos.Name = "gridOrcamentos";
             gridOrcamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -117,16 +116,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(14, 17);
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(9, 12);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(173, 15);
+            label1.Size = new Size(192, 17);
             label1.TabIndex = 1;
             label1.Text = "Procurar por número ou cliente";
             // 
             // txtCliente
             // 
-            txtCliente.Location = new Point(18, 48);
+            txtCliente.Location = new Point(10, 31);
             txtCliente.Margin = new Padding(4, 3, 4, 3);
             txtCliente.MaxLength = 150;
             txtCliente.Name = "txtCliente";
@@ -137,31 +137,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(61, 553);
+            label2.Location = new Point(73, 536);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(615, 24);
+            label2.Size = new Size(555, 24);
             label2.TabIndex = 3;
             label2.Text = "Para selecionar o orçamento de dois cliques em cima do mesmo";
-            // 
-            // btnPesquisaCliente
-            // 
-            btnPesquisaCliente.Location = new Point(200, 14);
-            btnPesquisaCliente.Margin = new Padding(4, 3, 4, 3);
-            btnPesquisaCliente.Name = "btnPesquisaCliente";
-            btnPesquisaCliente.Size = new Size(26, 22);
-            btnPesquisaCliente.TabIndex = 4;
-            btnPesquisaCliente.UseVisualStyleBackColor = true;
-            btnPesquisaCliente.Click += btnPesquisaCliente_Click;
             // 
             // PesquisaNumeroOrc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 582);
-            Controls.Add(btnPesquisaCliente);
+            ClientSize = new Size(718, 566);
             Controls.Add(label2);
             Controls.Add(txtCliente);
             Controls.Add(label1);
@@ -169,7 +158,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "PesquisaNumeroOrc";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pesquisar orçamento por número ou cliente";
+            Text = "Orçamentos cadastrados";
             Load += PesquisaNumeroOrc_Load;
             ((System.ComponentModel.ISupportInitialize)gridOrcamentos).EndInit();
             ResumeLayout(false);
@@ -182,7 +171,6 @@
         private Label label1;
         private TextBox txtCliente;
         private Label label2;
-        private Button btnPesquisaCliente;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn ClienteID;
         private DataGridViewTextBoxColumn Cliente;

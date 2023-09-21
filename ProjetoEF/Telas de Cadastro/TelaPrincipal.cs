@@ -1,14 +1,5 @@
 ﻿using ProjetoEF.Pesquisa;
 using ProjetoEF.Telas_de_Cadastro;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoEF
 {
@@ -21,24 +12,36 @@ namespace ProjetoEF
         private void btnClientesTelaPrincipal_Click(object sender, EventArgs e)
         {
             TelaDeCadastroClientes telaDeCadastroClientes = new TelaDeCadastroClientes();
-            telaDeCadastroClientes.Show();
+            telaDeCadastroClientes.ShowDialog();
         }
         private void btnFornecedoresTelaPrincipal_Click(object sender, EventArgs e)
         {
             TelaDeCadastroFornecedores telaDeCadastroFornecedores = new TelaDeCadastroFornecedores();
-            telaDeCadastroFornecedores.Show();
+            telaDeCadastroFornecedores.ShowDialog();
         }
         private void btnPecas_Click(object sender, EventArgs e)
         {
             TelaDeCadastroPecas telaDeCadastroPecas = new TelaDeCadastroPecas();
-            telaDeCadastroPecas.Show();
+            telaDeCadastroPecas.ShowDialog();
         }
 
         private void btnOrcamento_Click(object sender, EventArgs e)
         {
             Orcamento orc = new Orcamento();
-            orc.Show();
+            orc.ShowDialog();
         }
+        private void btnConsultarOrcamentos_Click(object sender, EventArgs e)
+        {
+            PesquisaNumeroOrc pesquisa = new PesquisaNumeroOrc();
+            pesquisa.ShowDialog();
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            Backup backup = new Backup();
+            backup.ShowDialog();
+        }
+
         private void btnSairDoSistema_Click(object sender, EventArgs e)
         {
             var resultado = MessageBox.Show("Deseja sair do sistema ?", "Pergunta do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

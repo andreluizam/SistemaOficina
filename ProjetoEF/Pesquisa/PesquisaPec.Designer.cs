@@ -46,7 +46,8 @@
             gridPecas.Name = "gridPecas";
             gridPecas.ReadOnly = true;
             gridPecas.ScrollBars = ScrollBars.Vertical;
-            gridPecas.Size = new Size(1077, 414);
+            gridPecas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridPecas.Size = new Size(698, 414);
             gridPecas.TabIndex = 0;
             gridPecas.CellMouseDoubleClick += dataGridView1_CellMouseDoubleClick;
             // 
@@ -61,41 +62,41 @@
             // txtPesquisa
             // 
             txtPesquisa.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPesquisa.Location = new Point(225, 24);
+            txtPesquisa.Location = new Point(14, 36);
             txtPesquisa.Margin = new Padding(4, 3, 4, 3);
             txtPesquisa.Name = "txtPesquisa";
-            txtPesquisa.Size = new Size(865, 29);
+            txtPesquisa.Size = new Size(698, 29);
             txtPesquisa.TabIndex = 5;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(14, 27);
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(13, 17);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(161, 25);
+            label1.Size = new Size(102, 16);
             label1.TabIndex = 4;
             label1.Text = "Pesquisar peça";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(176, 492);
+            label2.Location = new Point(42, 492);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(656, 25);
+            label2.Size = new Size(580, 25);
             label2.TabIndex = 6;
-            label2.Text = "Para selecionar o a peça de dois cliques em cima da mesma.";
+            label2.Text = "Para selecionar a peça de dois cliques em cima da mesma.";
             // 
             // PesquisaPec
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1105, 528);
+            ClientSize = new Size(729, 528);
             Controls.Add(label2);
             Controls.Add(txtPesquisa);
             Controls.Add(label1);
@@ -104,7 +105,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "PesquisaPec";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pesquisar peças";
+            Text = "Peças";
             Load += PesquisaPec_Load;
             ((System.ComponentModel.ISupportInitialize)gridPecas).EndInit();
             ResumeLayout(false);

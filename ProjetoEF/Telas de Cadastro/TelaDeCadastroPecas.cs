@@ -151,16 +151,26 @@ namespace ProjetoEF.Telas_de_Cadastro
                 btnApagar.Enabled = true;
             }
         }
+        #endregion
 
-        private void panelRadio_Paint(object sender, PaintEventArgs e)
+        #region Teclas
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (sender == txtNome)
+                {
+                    txtValor.Focus();
+                }
+                else if (sender == txtValor)
+                {
+                    txtQtd.Focus();
+                }
+            }
         }
 
-        private void radioOutros_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
+        #endregion
+
     }
-    #endregion
 }

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\ProjetoEF\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="Pesquisa\PequisaCliente.cs">
       <SubType>Form</SubType>
@@ -11,6 +14,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Pesquisa\PesquisaPec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Telas de Cadastro\Backup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Telas de Cadastro\Orcamento.cs">

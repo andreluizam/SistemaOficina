@@ -1,4 +1,5 @@
 ﻿using ProjetoEF.Contexto;
+using System.Windows.Forms;
 
 namespace ProjetoEF.Pesquisa
 {
@@ -16,6 +17,7 @@ namespace ProjetoEF.Pesquisa
         {
             lstPecas = new List<Pecas>();
             CarregaDados();
+            txtPesquisa.Focus();
         }
         private void CarregaDados()
         {
@@ -25,7 +27,7 @@ namespace ProjetoEF.Pesquisa
                 gridPecas.DataSource = lstPecas.ToList();
             }
         }
-
+        #region Seleciona peça
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < gridPecas.Rows.Count)
@@ -40,6 +42,8 @@ namespace ProjetoEF.Pesquisa
                 this.Close();
             }
         }
+
+        #endregion
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
@@ -56,7 +60,6 @@ namespace ProjetoEF.Pesquisa
                 }
             }
         }
-
         public Pecas PecaSelecionada
         {
             get { return pecasSelecionada; }

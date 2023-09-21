@@ -80,3 +80,4 @@ C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\P
 C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\ProjetoEF\obj\Debug\net6.0-windows\ProjetoEF.Properties.Resources.resources
 C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\ProjetoEF\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\ProjetoEF\obj\Debug\net6.0-windows\ProjetoEF.Pesquisa.PesquisaFornecedor.resources
+C:\Users\Usuário\Documents\Desenvolvimento\projetoC#\ProjetoOficina\ProjetoEF\ProjetoEF\obj\Debug\net6.0-windows\ProjetoEF.Telas_de_Cadastro.Backup.resources

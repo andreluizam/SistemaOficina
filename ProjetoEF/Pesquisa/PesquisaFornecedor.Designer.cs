@@ -38,8 +38,9 @@
             // gridFornecedores
             // 
             gridFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridFornecedores.Location = new Point(13, 64);
+            gridFornecedores.Location = new Point(13, 67);
             gridFornecedores.Name = "gridFornecedores";
+            gridFornecedores.ReadOnly = true;
             gridFornecedores.RowTemplate.Height = 25;
             gridFornecedores.Size = new Size(915, 448);
             gridFornecedores.TabIndex = 0;
@@ -48,33 +49,33 @@
             // txtPesquisa
             // 
             txtPesquisa.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPesquisa.Location = new Point(252, 23);
+            txtPesquisa.Location = new Point(13, 34);
             txtPesquisa.Margin = new Padding(4, 3, 4, 3);
             txtPesquisa.Name = "txtPesquisa";
-            txtPesquisa.Size = new Size(676, 29);
+            txtPesquisa.Size = new Size(915, 29);
             txtPesquisa.TabIndex = 5;
             txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(4, 27);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(11, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(240, 25);
+            label1.Size = new Size(206, 20);
             label1.TabIndex = 4;
-            label1.Text = "Pesquisar fornecedores";
+            label1.Text = "Razão Social do fornecedor";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(138, 519);
+            label2.Location = new Point(144, 523);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(695, 25);
+            label2.Size = new Size(633, 25);
             label2.TabIndex = 6;
             label2.Text = "Para selecionar um fornecedor basta dar dois cliques no mesmo.";
             // 
@@ -82,14 +83,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(940, 550);
+            ClientSize = new Size(940, 557);
             Controls.Add(label2);
             Controls.Add(txtPesquisa);
             Controls.Add(label1);
             Controls.Add(gridFornecedores);
             Name = "PesquisaFornecedor";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pesquisar fornecedores";
+            Text = "Fornecedores";
             Load += PesquisaFornecedor_Load;
             ((System.ComponentModel.ISupportInitialize)gridFornecedores).EndInit();
             ResumeLayout(false);

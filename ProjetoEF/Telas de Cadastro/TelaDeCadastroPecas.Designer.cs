@@ -54,6 +54,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(723, 26);
             txtNome.TabIndex = 99;
+            txtNome.KeyDown += txtNome_KeyDown;
             // 
             // lblNome
             // 

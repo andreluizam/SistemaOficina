@@ -26,6 +26,7 @@ namespace ProjetoEF.Pesquisa
         {
             lstFornecedor = new List<Fornecedores>();
             CarregaDados();
+            txtPesquisa.Focus();
         }
 
         private void CarregaDados()

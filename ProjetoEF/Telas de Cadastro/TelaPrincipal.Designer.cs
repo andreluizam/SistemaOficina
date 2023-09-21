@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             panel1 = new Panel();
+            btnBackup = new Button();
+            btnConsultarOrcamentos = new Button();
             btnOrcamento = new Button();
             btnPecas = new Button();
             btnSairDoSistema = new Button();
@@ -42,6 +45,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(btnBackup);
+            panel1.Controls.Add(btnConsultarOrcamentos);
             panel1.Controls.Add(btnOrcamento);
             panel1.Controls.Add(btnPecas);
             panel1.Controls.Add(btnSairDoSistema);
@@ -54,8 +59,47 @@
             panel1.Size = new Size(281, 727);
             panel1.TabIndex = 0;
             // 
+            // btnBackup
+            // 
+            btnBackup.Cursor = Cursors.Hand;
+            btnBackup.FlatAppearance.BorderSize = 0;
+            btnBackup.FlatStyle = FlatStyle.Flat;
+            btnBackup.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBackup.ForeColor = Color.White;
+            btnBackup.Image = (Image)resources.GetObject("btnBackup.Image");
+            btnBackup.ImageAlign = ContentAlignment.TopLeft;
+            btnBackup.Location = new Point(0, 395);
+            btnBackup.Margin = new Padding(4, 3, 4, 3);
+            btnBackup.Name = "btnBackup";
+            btnBackup.Size = new Size(281, 86);
+            btnBackup.TabIndex = 10;
+            btnBackup.Text = "      Backup";
+            btnBackup.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBackup.UseVisualStyleBackColor = true;
+            btnBackup.Click += btnBackup_Click;
+            // 
+            // btnConsultarOrcamentos
+            // 
+            btnConsultarOrcamentos.Cursor = Cursors.Hand;
+            btnConsultarOrcamentos.FlatAppearance.BorderSize = 0;
+            btnConsultarOrcamentos.FlatStyle = FlatStyle.Flat;
+            btnConsultarOrcamentos.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConsultarOrcamentos.ForeColor = Color.White;
+            btnConsultarOrcamentos.Image = (Image)resources.GetObject("btnConsultarOrcamentos.Image");
+            btnConsultarOrcamentos.ImageAlign = ContentAlignment.TopLeft;
+            btnConsultarOrcamentos.Location = new Point(0, 318);
+            btnConsultarOrcamentos.Margin = new Padding(4, 3, 4, 3);
+            btnConsultarOrcamentos.Name = "btnConsultarOrcamentos";
+            btnConsultarOrcamentos.Size = new Size(281, 71);
+            btnConsultarOrcamentos.TabIndex = 9;
+            btnConsultarOrcamentos.Text = "     Consultar             Orçamentos";
+            btnConsultarOrcamentos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnConsultarOrcamentos.UseVisualStyleBackColor = true;
+            btnConsultarOrcamentos.Click += btnConsultarOrcamentos_Click;
+            // 
             // btnOrcamento
             // 
+            btnOrcamento.Cursor = Cursors.Hand;
             btnOrcamento.FlatAppearance.BorderSize = 0;
             btnOrcamento.FlatStyle = FlatStyle.Flat;
             btnOrcamento.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -74,6 +118,7 @@
             // 
             // btnPecas
             // 
+            btnPecas.Cursor = Cursors.Hand;
             btnPecas.FlatAppearance.BorderSize = 0;
             btnPecas.FlatStyle = FlatStyle.Flat;
             btnPecas.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -92,6 +137,7 @@
             // 
             // btnSairDoSistema
             // 
+            btnSairDoSistema.Cursor = Cursors.Hand;
             btnSairDoSistema.Dock = DockStyle.Bottom;
             btnSairDoSistema.FlatAppearance.BorderSize = 0;
             btnSairDoSistema.FlatStyle = FlatStyle.Flat;
@@ -110,6 +156,7 @@
             // 
             // btnFornecedoresTelaPrincipal
             // 
+            btnFornecedoresTelaPrincipal.Cursor = Cursors.Hand;
             btnFornecedoresTelaPrincipal.FlatAppearance.BorderSize = 0;
             btnFornecedoresTelaPrincipal.FlatStyle = FlatStyle.Flat;
             btnFornecedoresTelaPrincipal.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -128,6 +175,7 @@
             // 
             // btnClientesTelaPrincipal
             // 
+            btnClientesTelaPrincipal.Cursor = Cursors.Hand;
             btnClientesTelaPrincipal.FlatAppearance.BorderSize = 0;
             btnClientesTelaPrincipal.FlatStyle = FlatStyle.Flat;
             btnClientesTelaPrincipal.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -146,6 +194,7 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = Properties.Resources.imagem_de_fundi;
             pictureBox1.Location = new Point(281, 0);
             pictureBox1.Margin = new Padding(4, 3, 4, 3);
             pictureBox1.Name = "pictureBox1";
@@ -180,5 +229,7 @@
         private PictureBox pictureBox1;
         private Button btnPecas;
         private Button btnOrcamento;
+        private Button btnConsultarOrcamentos;
+        private Button btnBackup;
     }
 }

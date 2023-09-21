@@ -155,33 +155,33 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(14, 33);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(9, 8);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(177, 25);
+            label1.Size = new Size(123, 20);
             label1.TabIndex = 1;
-            label1.Text = "Pesquisar cliente";
+            label1.Text = "Nome do cliente";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(140, 571);
+            label2.Location = new Point(147, 571);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(655, 25);
+            label2.Size = new Size(596, 25);
             label2.TabIndex = 2;
             label2.Text = "Para selecionar o cliente de dois cliques em cima do mesmo.";
             // 
             // txtNome
             // 
             txtNome.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNome.Location = new Point(199, 31);
+            txtNome.Location = new Point(9, 31);
             txtNome.Margin = new Padding(4, 3, 4, 3);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(730, 29);
+            txtNome.Size = new Size(920, 29);
             txtNome.TabIndex = 3;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
@@ -198,7 +198,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "PequisaCliente";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pesquisar Cliente";
+            Text = "Clientes";
             Load += PequisaCliente_Load;
             ((System.ComponentModel.ISupportInitialize)gridClientes).EndInit();
             ResumeLayout(false);

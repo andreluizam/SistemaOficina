@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
-using ProjetoEF.Contexto;
+﻿using ProjetoEF.Contexto;
 
 namespace ProjetoEF
 {
@@ -133,28 +121,31 @@ namespace ProjetoEF
         #region Manipulação de dados
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = null;
-
-            using (DataContext context = new DataContext())
+            if (txtNome.Text != "" || txtNome.Text != null)
             {
-                cliente = new Cliente();
-                cliente.Nome = txtNome.Text;
-                cliente.CpfCnpj = txtCpfCnpj.Text;
-                cliente.Telefone = txtTelefone.Text;
-                cliente.Carro = txtCarro.Text;
-                cliente.Placa = txtPlaca.Text;
-                cliente.Cep = txtCep.Text;
-                cliente.Cidade = txtCidade.Text;
-                cliente.Estado = txtEstado.Text;
-                cliente.Bairro = txtBairro.Text;
-                cliente.Rua = txtRua.Text;
-                context.Clientes.Add(cliente);
-                context.SaveChanges();
+                Cliente cliente;
 
-                MessageBox.Show("Gravação Realizada com Sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (DataContext context = new DataContext())
+                {
+                    cliente = new Cliente();
+                    cliente.Nome = txtNome.Text;
+                    cliente.CpfCnpj = txtCpfCnpj.Text;
+                    cliente.Telefone = txtTelefone.Text;
+                    cliente.Carro = txtCarro.Text;
+                    cliente.Placa = txtPlaca.Text;
+                    cliente.Cep = txtCep.Text;
+                    cliente.Cidade = txtCidade.Text;
+                    cliente.Estado = txtEstado.Text;
+                    cliente.Bairro = txtBairro.Text;
+                    cliente.Rua = txtRua.Text;
+                    context.Clientes.Add(cliente);
+                    context.SaveChanges();
 
-            };
-            limparCampos();
+                    MessageBox.Show("Gravação Realizada com Sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                };
+                limparCampos();
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -187,22 +178,24 @@ namespace ProjetoEF
         {
             try
             {
-                Cliente cliente = null;
-                using (DataContext context = new DataContext())
                 {
-                    cliente = context.Clientes.FirstOrDefault(o => o.ID == clienteID);
-                    context.Remove(cliente);
-                    context.SaveChanges();
-                    MessageBox.Show("Exclusão Realizada com Sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cliente cliente = null;
+                    using (DataContext context = new DataContext())
+                    {
+                        cliente = context.Clientes.FirstOrDefault(o => o.ID == clienteID);
+                        context.Remove(cliente);
+                        context.SaveChanges();
+                        MessageBox.Show("Exclusão Realizada com Sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (System.Exception)
             {
-                MessageBox.Show("Clientes vinculados á orçamentos não são possíveis de excluir","Aviso do sistema",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Clientes vinculados á orçamentos não são possíveis de excluir", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
             limparCampos();
         }
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             PequisaCliente pesquisa = new PequisaCliente();
@@ -228,5 +221,61 @@ namespace ProjetoEF
             }
         }
         #endregion
+
+        #region Tecla enter
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (sender == txtNome)
+                {
+                    txtCpfCnpj.Focus();
+                }
+                else if (sender == txtCpfCnpj)
+                {
+                    txtTelefone.Focus();
+                }
+                else if (sender == txtTelefone)
+                {
+                    txtCarro.Focus();
+                }
+                else if (sender == txtCarro)
+                {
+                    txtPlaca.Focus();
+                }
+                else if (sender == txtPlaca)
+                {
+                    txtCep.Focus();
+                }
+                else if (sender == txtCep)
+                {
+                    txtCidade.Focus();
+                }
+                else if (sender == txtCidade)
+                {
+                    txtEstado.Focus();
+                }
+                else if (sender == txtEstado)
+                {
+                    txtBairro.Focus();
+                }
+                else if (sender == txtBairro)
+                {
+                    txtRua.Focus();
+                }
+                else
+                {
+                    btnSalvar.Focus();
+                }
+            }
+        }
+        #endregion
+
+        private void TelaDeCadastroClientes_Load(object sender, EventArgs e)
+        {
+            desabilitaBotao();
+            btnAlterar.Visible = false;
+            btnSalvar.Visible = true;
+        }
     }
 }

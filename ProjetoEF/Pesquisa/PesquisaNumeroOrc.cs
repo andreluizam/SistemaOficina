@@ -1,14 +1,6 @@
 ﻿using ProjetoEF.Contexto;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using ProjetoEF.Telas_de_Cadastro;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoEF.Pesquisa
 {
@@ -26,6 +18,7 @@ namespace ProjetoEF.Pesquisa
         {
             lstOrcamentos = new List<Orcamentos>();
             CarregaDados();
+            txtCliente.Focus();
         }
 
         private void CarregaDados()
@@ -40,6 +33,7 @@ namespace ProjetoEF.Pesquisa
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            Orcamento orc = new Orcamento();
             Cliente cliente = null;
             using (DataContext context = new DataContext())
             {
@@ -62,17 +56,6 @@ namespace ProjetoEF.Pesquisa
         {
             get { return orcamentoSelecionado; }
         }
-
-        private void btnPesquisaCliente_Click(object sender, EventArgs e)
-        {
-            PequisaCliente pesquisa = new PequisaCliente();
-            pesquisa.ShowDialog();
-            if (pesquisa.ClienteSelecionado != null)
-            {
-                txtCliente.Text = pesquisa.ClienteSelecionado.Nome;
-            }
-        }
-
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
             if (txtCliente != null)
@@ -81,9 +64,7 @@ namespace ProjetoEF.Pesquisa
 
                 using (DataContext context = new DataContext())
                 {
-                    var resultados = context.Orcamentos
-                        .Where(orcamentos => orcamentos.ClienteID.Equals(nomePesquisa))
-                        .ToList();
+                    var resultados = context.Orcamentos.Where(orcamentos => orcamentos.ClienteID.Equals(nomePesquisa)).ToList();
 
                     gridOrcamentos.DataSource = resultados;
                 }

@@ -16,6 +16,7 @@ namespace ProjetoEF
         {
             lstClientes = new List<Cliente>();
             CarregaDados();
+            txtNome.Focus();
         }
         private void CarregaDados()
         {

@@ -144,4 +144,14 @@
   <metadata name="Subtotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PesquisaOrc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxAAAAsQAa0jvXUAAAAHdElNRQfnBhwQBhl8DTArAAAA
+        nElEQVQ4T92SvwnCQBhHD1NYihO4gA4iKGiRKWIlTpARYuEOYilYCK7iKr53QUwVL6aRPHhwX/Hj+8OF
+        YTPGCY5i1YEMczzjFU+4wGQM33GNczzgDWf4Fce28ypWHyos6mc77uzYdm6yx7J+tuPB3Nmx30zxgttY
+        JeDB3PmIdjb8xA0m48Hc2bHtbPiBS/wZwzvs/C+a9Ar/JSG8ALM9Eo9WSNwsAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
