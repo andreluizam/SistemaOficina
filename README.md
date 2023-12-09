@@ -17,3 +17,6 @@ Sistema para oficinas desenvolvido utilizando a linguagem de programação C# (W
 -  C#
 -  SQL Server 2019
 -  Entity Framework
+
+![TelaPrincipal](https://github.com/andreluizam/SistemaOficina/assets/136391597/583407e4-8c92-4cf5-9105-c8b4b8fa8bad)
+![TelaCadastraFornc](https://github.com/andreluizam/SistemaOficina/assets/136391597/adcb1184-dfb3-48e7-a79d-7c5e7205d4c4)
